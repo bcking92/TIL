@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 import requests
-from datetime import datetime
+import datetime
 import bs4
 import random
 
@@ -26,8 +26,6 @@ def menu():
       '제육': 'https://mblogthumb-phinf.pstatic.net/20140916_154/dew36_14107988004269WVlb_JPEG/1.jpg?type=w2' , 
       '초밥' : 'http://mblogthumb2.phinf.naver.net/MjAxNzAzMDZfOTUg/MDAxNDg4ODA2NzYxMjMy.GBaA7LWRZtgAQDxkWD47_quKGTGR0gJCvCRVDh8xBbMg.p4Smgay1gtqeXjP2i15vSdjb7WrLwRw5Ucyf65dCR7Ag.JPEG.boru130/DSC08901.JPG?type=w800'}
     selected = random.choice(list(menu.keys()))
-     
-   
     return render_template('menu.html', foodname = selected, foodimage = menu[selected])
 
 
@@ -36,7 +34,6 @@ def menu():
 
 @app.route('/lotto/')
 def lotto():
-    # if datetime.now() - datetime.timedelta(days = 7 * week )
     no_lotto = 866
     url = f"https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo={no_lotto}"
     request = requests.get(url)
