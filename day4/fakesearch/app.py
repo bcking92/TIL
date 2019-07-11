@@ -84,6 +84,7 @@ def destiny():
 babos = ''
 @app.route('/admin')
 def baba():
+    global babos
     for k, v in storage_des.items() :
         for a in v :
             babos = babos + f'{k} ♥ {a}\n' 
