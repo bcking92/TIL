@@ -1,9 +1,9 @@
-a = int(input())
-b = a.split(', ')
+a = input()
+b = a.split(',')
 matrix = []
-for i in int(b[1]):
+for i in range(int(b[0].strip())):
     column = []
-    for j in int(b[0]):
+    for j in range(int(b[1].strip())):
         column.append(i*j)
     matrix.append(column)
 print(matrix)
