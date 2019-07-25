@@ -56,7 +56,6 @@ t1.goto(x,y-20)
 t1.color('red')
 t1.goto(x,y-120)
 t1.color('green')
-
 t1.goto(x,y-360)
 make_roval(t1)
 make_loval(t1)
