@@ -362,7 +362,7 @@ pikachu = ElectricPoketmon('piakchu')
 Firetail = FirePoketmon('Firetail')
 Kobuggi = WaterPoketmon('Kobuggi')
 
-for i in range(10):
+for i in range(1):
     pikachu.cure()
     print('')
     Firetail.cure()
