@@ -1,0 +1,71 @@
+.divm {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 500px;
+  height: 500px;
+  /* outline: 3px black;
+  outline-style: solid; */
+  border: 3px solid;
+}
+
+.div1 {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(250, 215, 253);
+}
+
+.div2 {
+  position: relative;
+  left: 100px;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(17, 0, 255);
+}
+
+.div3 {
+  position: relative;
+  left: 200px;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(61, 116, 29);
+}
+
+.div4 {
+  position: relative;
+  width:100px;
+  height: 100px;
+  top: 100px;
+  left: 400px;
+  background-color: rgb(255, 0, 0);
+}
+
+.div5 {
+  position: fixed;
+  width:100px;
+  height: 100px;
+  top: 700px;
+  left: 700px;
+  background-color: rgb(255, 219, 101);
+}
+
+.div6 {
+  position: absolute;
+  width:100px;
+  height: 100px;
+  bottom: 400px;
+  left: 200px;
+  background-color: rgb(255, 187, 0);
+}
+
+.div7 {
+  position: relative;
+  width:100px;
+  height: 100px;
+  bottom: 100px;
+  left: 300px;
+  background-color: rgb(139, 4, 192);
+}

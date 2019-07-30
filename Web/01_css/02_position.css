@@ -1,0 +1,57 @@
+div {
+  height: 100px;
+  width: 100px;
+  background-color: burlywood;
+  line-height: 100px;
+  text-align: center;
+  color: #030303;
+}
+
+.box1 {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(192, 148, 92);
+  line-height: 100px;
+  text-align: center;
+  color: #030303;
+}
+
+.box2 {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(155, 109, 44);
+  line-height: 100px;
+  text-align: center;
+  color: #030303;
+}
+
+.box3 {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(88, 61, 23);
+  line-height: 100px;
+  text-align: center;
+  color: #030303;  
+}
+
+.relative {
+  position: relative;
+  /* top: 100px; */
+  left: 100px;
+  /* z-index: 100; */
+}
+
+.absolute {
+  
+  position: absolute;
+  left:100px;
+  top:100px;
+}
+
+.fixed {
+  background-color: blueviolet;
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+}
+

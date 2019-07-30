@@ -1,0 +1,60 @@
+.hidden {
+  visibility: hidden;
+}
+
+
+.None {
+  display:none;
+}
+
+.inline-block {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+
+div {
+  /* border-width: 0px 0px 6px 0px;
+  border-style: dashed ;
+  border-color: skyblue; 
+  margin: 20px;
+  padding: 5px;
+  border: 2px solid black
+  display: block; */
+  height: 100px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+  letter-spacing: 10px;
+  
+}
+h1 {
+  margin: 10px 10px 20px 10px;
+  text-align: center;
+}
+
+a {
+  margin-left: 10px;
+  margin-right: 10px;
+  /* line-height: 50px; */
+}
+
+#zero {
+  background-color: salmon
+
+}
+
+.odd {
+  background-color: rosybrown;
+  line-height:100px
+
+}
+
+.even {
+
+  background-color: rgb(119, 255, 198);
+
+}
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>FORM</h1>
+  <p>주문서를 작성하여 주십시오</p>
+  <form>
+    <span>이름: <input type="text" placeholder="이름을 입력해주세요."></span><br>
+    <span>날짜: <input type="date" value="2019-01-04"></span>
+    <h2>1. 샌드위치 선택</h2>
+      <input type="radio" name="sandwich" value="egg_mayo">에그마요<br>
+      <input type="radio" name="sandwich" value="italian_bmt">이탈리안 비엠티<br>
+      <input type="radio" name="sandwich" value="Turkish_bacon_avo">터키 베이컨 아보카도
+    <hr>
+    <h2>2. 사이즈 선택</h2>
+      <input type="number" min="15" max="30">
+    <hr>
+    <h2>3. 빵</h2>
+      <select name="bread">
+        <option value="1">허니오트</option>
+        <option value="2" disabled>플렛브래드</option>
+        <option value="3">히티 이탈리안</option>
+      </select>
+    <hr>
+    <h2>4. 야채/소스</h2>
+      <input type="checkbox">토마토<br>
+      <input type="checkbox">오이<br>
+      <input type="checkbox">할라피뇨<br>
+      <input type="checkbox">핫 칠리<br>
+      <input type="checkbox">바베큐<br>
+      <br>
+    <button>submit</button>
+  </form>
+
+  <blockquote cite="https://poiemaweb.com/html5-tag-text">사용할 수는 있지만 시멘틱을 살리기 위해 제목 이외에는 이용하지 않는 것이 좋다.</blockquote>  
+</body>
+</html>
