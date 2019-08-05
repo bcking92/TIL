@@ -1,0 +1,19 @@
+ol {
+  background: blueviolet;
+}
+
+ol > li {
+  color:white;
+}
+
+ol > li:nth-child(6) {
+  color: greenyellow;
+}
+
+#ssafy > p:nth-of-type(2) {
+  color: red
+}
+
+div span {
+ color: burlywood;
+}

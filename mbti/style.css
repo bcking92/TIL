@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+section ul {
+  margin : 10px 0;
+}
+
+section > ul > li {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+a + ul {
+  background-color: gold;
+}
+
+a ~ ul {
+  border: solid darkgray 1px;
+}
+
+/* 속성 셀렉터 */
+
+a[target="_blank"] {
+  border: solid 2px black;
+  border-radius: px;
+  padding: 5px
+
+}
+/* a태그중에 target속성이 _blank인 것에 적용하기, 
+데이터를 긁어올 때도 같은 방식  */
+
+ul[class] > li {
+  width: 24%;
+  height: 25%;
+  display: inline-block;
+}
+
+/* ul중에 class 속성을 가지고 있는 애들 아래에 있는 li 들에게 적용 */
+
+.me {
+  background-color: black;
+  color: white;
+}
+
+/* img[alt$="TYPE"] {
+
+} */
+/* 정규표현식 */
