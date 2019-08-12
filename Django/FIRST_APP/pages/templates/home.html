@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>데이터를 넘겨받는법</h1>
+  <h2>{{ name }} </h2>
+  {% for item in data %}
+     <p>{{ item }}</p>
+  {% endfor %}
+
+  <h1>데이터가 없을 떄</h1>
+  {% for movie in empty_data %}
+    <!-- forloop.counter 는 for의 순서를 나타냄 (1부터)-->
+    <p>{{ forloop.counter}} : {{ movie }}</p>
+  {% empty %}
+    <p>영화 데이터가 없습니다.</p>
+
+  {% endfor %} 
+
+
+  <h1>이중 FOr문</h1>
+  {% for i in matrix %}
+    {% for j in i %}
+      <p> {{ j }}</p>
+    {% endfor %}
+  {% endfor %}
+
+  <h1>다양한 helper / filter</h1>
+  <h2>helper(공식명칭은 built-in tag)</h2>
+  <!-- fake 문자열을 지원함 lorem -->
+  <!-- 헬퍼들, 공식명칭은 built-in tag -->
+  <p>{% lorem %}</p>
+  <p>{% lorem 3 p %}</p> 
+
+  <h2>filter</h2>
+  <h3>str</h3>
+  {% for movie in empty_data %}
+  <!-- |length 띄어쓰기 포함한 글자 수를 출력 -->
+    {{ movie|length }}
+    <!-- |truncatechars:숫자 출력결과를 숫자만큼만 표시하고 줄여버림 -->
+    {{ movie|truncatechars:2 }} 
+  {% endfor %}
+
+  <h3>int</h3>
+  {{ number|add:10 }}
+
+  <h3>datetime</h3>
+  {% now "y년 m월 d일 h시 i분 s초 e" %}
+
+
+  <h1>Django template language(DTL)</h1>
+  <ul>
+    <li>for</li>
+    <li>if</li>
+    <li>helper / filter</li>
+    <li></li>
+  </ul>
+</body>
+</html>

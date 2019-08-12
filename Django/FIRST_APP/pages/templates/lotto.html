@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Lotto 추천</title>
+  <style>
+    .numbers {
+        margin-left: 32px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: yellow;
+        text-align: center;
+        display: inline-block;
+        line-height: 50px;
+        text-
+    }
+    .c1 {
+      background-color: red;
+    }
+    .c2 {
+      background-color: rgb(39, 23, 255)(122, 28, 28);
+    }
+    .c3 {
+      background-color: rgb(85, 85, 85);
+    }
+  </style>
+</head>
+
+<body>
+ 
+    {% for num in lotto %}
+    <!-- <pre>   {{ num }},</pre> -->
+
+    {% if num <= 10 %}
+    <p class="numbers">{{ num }}</p>
+    
+    {% elif num <= 20 %}
+    <p class="numbers c1">{{ num }}</p>
+
+    {% elif num <= 30 %}
+    <p class="numbers c2">{{ num }}</p>
+   
+    {% elif num <= 45 %}
+    <p class="numbers c3">{{ num }}</p>
+    {% endif %}
+    {% endfor %}
+
+  
+  
+
+</body>
+
+</html>
