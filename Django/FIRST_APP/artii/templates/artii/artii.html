@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Ascii art를 생성할 단어를 입력해주세요</h1>
+  <form action="/artii/result/" method="POST">
+    {% csrf_token %}
+    여기에 입력해 주세요. <input type="text" name="word"><button type="submit">만들기</button>
+    <br>
+    원하는 폰트를 선택해주세요 
+    <select name="font" id="">
+      {% for item in font_res %}
+      <option value={{item}}> {{ item }} </option>
+      {% endfor %}
+    </select>
+  </form>
+
+  
+</body>
+</html>

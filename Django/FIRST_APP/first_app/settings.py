@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+# 프로젝트의 절대경로 이미 저장되어있음
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -32,6 +33,7 @@ ALLOWED_HOSTS = []
 
 # 새로 설치하는 앱은 최상단에
 INSTALLED_APPS = [
+    'artii',
     'pages',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -56,7 +58,10 @@ ROOT_URLCONF = 'first_app.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        # 템플릿 찾을 때 뒤질 폴더 목록
+        'DIRS': [
+            os.path.join(BASE_DIR,'first_app','templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

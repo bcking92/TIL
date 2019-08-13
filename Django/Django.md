@@ -44,3 +44,28 @@ view에서 html 문서를 전달하는 것이 아니라 httpresponse라는 객�
 model fat <- MTV MVC의 대원칙, model을 fat하게 만들고 template은 가볍게!
 
 csrf cross site refference
+
+
+
+### Template inheritance
+
+1. 공통적으로 쓸 템플릿(code)을 뽑아낸다.
+   - 
+2. 해당 파일을 따로 만들고,
+3. 활용할 다른 템플릿 파일에서 불러와 쓴다.
+
+{% block 이름%} {% endblock %}
+
+부분을 구성하는 template 이름은 언더바(_)를 붙여준다 ex. _nav.html
+
+partilal rendering은 {% include '파일명.html' %} 을 사용
+
+
+
+1. 사용자의 입력을 받아
+
+   /artii/
+
+2. artii api를 통해 ascii art를 보여주는 앱.
+
+   /artii/result

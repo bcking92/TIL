@@ -1,12 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block body %}
+  <h1>Django template language(DTL)</h1>
+  <ul>
+    <li>for</li>
+    <li>if</li>
+    <li>helper / filter</li>
+    <li></li>
+  </ul>
+
   <h1>데이터를 넘겨받는법</h1>
   <h2>{{ name }} </h2>
   {% for item in data %}
@@ -51,14 +53,7 @@
 
   <h3>datetime</h3>
   {% now "y년 m월 d일 h시 i분 s초 e" %}
+  
+{% endblock %}
 
 
-  <h1>Django template language(DTL)</h1>
-  <ul>
-    <li>for</li>
-    <li>if</li>
-    <li>helper / filter</li>
-    <li></li>
-  </ul>
-</body>
-</html>
