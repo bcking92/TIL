@@ -69,3 +69,10 @@ partilal rendering은 {% include '파일명.html' %} 을 사용
 2. artii api를 통해 ascii art를 보여주는 앱.
 
    /artii/result
+
+
+
+
+
+LINTER, LINTING 문법 강제로 지키게 오류처럼 띄워주는 것.
+

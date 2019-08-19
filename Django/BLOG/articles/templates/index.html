@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body%}
+<h3 class="mt-5"><form action="/articles/new"><button>글쓰러가기</button></form></h3>
+<div class="row mt-5">
+  
+  
+  <h1>목록 글의 목록'쓰</h1>
+
+</div>
+{% for content in articles %}
+<h1>{{ forloop.counter }}</h1>
+<h3>제목 : {{ content.title }}</h3>
+<h3>내용 : {{ content.content }}</h3>
+<h3>작성시간 : {{ content.created_at }}</h3>
+<img src="{{ content.img_url }}" alt="{{ content.title }}">
+{% endfor %}
+
+
+</div>
+{% endblock %}

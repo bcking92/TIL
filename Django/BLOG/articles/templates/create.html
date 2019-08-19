@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block body%}
+  <h1>성공적으로 글이 작성되어 버렸습니다.</h1>
+  <h3>제목 {{ title }}</h3>
+  <h4>내용 {{ content }}</h4>
+  <form action="/articles"><button>글목록 보러가기</button></form>
+  {% endblock %}
