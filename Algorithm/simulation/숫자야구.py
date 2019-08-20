@@ -5,7 +5,9 @@ for i in range(101):
 for i in range(101,1000):
     if len(set(str(i))) != 3:
         hoobo[i] = 0
-
+    if '0' in str(i):
+        hoobo[i] = 0
+    
 for i in range(int(input())):
     young, strike, ball = map(int,input().split())
     if strike != 3:
