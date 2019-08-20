@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container mt-5">
+  <div class="row">
+    <h3>제목 : {{ post.title }}</h3>
+  </div>
+  <div class="row" style="width: 100%">
+  <h3>{{ post.content }} </h3>
+</div>
+  <div class="row" style="width: 100%">
+    <img src="{{ post.img_url }}">
+  </div>
+  <div class="row">
+    <a href="/">목록보기</a>
+  </div>
+</div>
+
+
+{% endblock %}

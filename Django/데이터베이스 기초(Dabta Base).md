@@ -74,3 +74,21 @@ python manage.py createsuperuser admin 계정 만들기 python terminal에서 �
 ## SQL(Structured Query Language)
 
 - RDBMS(Related Data Base Managing System)의 데이터를 관리하기 위해 설계된 특수 목적의 프로그래밍 언어. RDBMS 자료의 검색과 관리 데이터베이스 스키마 생성과 수정, 데이터베이스 객체 접근 조정 관리를 위해 고안되었음.
+
+
+
+## 어플리케이션 고안하기
+
+1. Model 설계하기 (데이터베이스 설계)
+   - view에서는 최소한의 것만 남기고 통계나 계산들도 다 Model 단으로 올려버릴 것임.(사용자는 빠르고 편하게 정보를 받아보고 계산은 server가 해야함)
+2. Workflow
+   1. url
+   2. view
+   3. templates
+
+순으로 이루어짐.
+
+
+
+DTL 문법
+

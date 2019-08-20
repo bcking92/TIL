@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h1>목록</h1>
+    </div>
+    <div class="col-12">
+      {% for article in Article %}
+      <a href="/articles/post/{{article.id}}" class="text-dark">
+      <h3 class="mb-3">{{ article.id }}.  {{ article.title }}</h3>
+      {% endfor %}
+      <div class="text-right">
+      <a href="/articles/new" class="text-dark">글 쓰러가기</a>
+    </div>
+    </div>
+    
+  </div>
+</div>
+
+
+
+{% endblock %}
