@@ -35,3 +35,5 @@ for T in range(int(input())):
         result += i[1]
 
     print('#{} {}'.format(T + 1, result))
+
+
