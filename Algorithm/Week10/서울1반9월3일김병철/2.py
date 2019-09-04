@@ -35,12 +35,13 @@ def append(data):
     while q.next is not None:
         temp = q
         q = q.next
-    q.next = Node(data)
-    last = q.next
+    a = Node(data)
+    q.next = a
+    last = a
     if temp:
-        q.prev = temp
+        a.prev = q
     else:
-        q.prev = q
+        a.prev = q
 
 
 # def delete(x):
@@ -57,20 +58,20 @@ def append(data):
 def insert(idx, x):
     global head, last
     q = head
-    i = 1
+    i = 0
     while i < idx:
         q = q.next
         i += 1
     temp = q.next
     if temp:
         new = Node(x)
-        temp.pre = new
+        temp.prev = new
         new.next = temp
-        new.pre = q
+        new.prev = q
         q.next = new
     if not temp:
         new = Node(x)
-        new.pre = q
+        new.prev = q
         q.next = new
         last = new
 
@@ -99,9 +100,36 @@ for T in range(int(input())):
     a = Node('mylist')
     head = a
     last = a
-    for i in map(int,input().split()):
+    cc = head
+    for i in map(int, input().split()):
         append(i)
+        # cc = cc.next
+        # print(cc.prev.data)
 
-    for i in range(M):
-        for j in map(int,input().split()):
+    for i in range(M-1):
+        b = list(map(int, input().split()))
+        q = head
+        q = q.next
+        i = 0
+        while q is not None and q.data < b[0]:
+            q = q.next
+            i += 1
+        # if i == 1:
+        #     i = 0
+        if q is not None:
+            if q.prev.data == 'mylist':
+                for j in range(len(b)):
+                    insert(i+j, b[j])
+            else:
+                for j in range(len(b)):
+                    insert(i+j+1, b[j])
+        else:
+            for j in range(len(b)):
+                insert(i+j, b[j])
 
+    q = head
+
+    while q is not None:
+        print(q.data, end=' ')
+        q = q.next
+    print()
