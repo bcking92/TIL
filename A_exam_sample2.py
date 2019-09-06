@@ -1,4 +1,4 @@
-direction = [(0,1),(0,-1),(-1,0),(1,0)]
+direction = [(0,1), (0,-1), (-1,0), (1,0)]
 
 for T in range(int(input())):
     N = int(input())
@@ -15,10 +15,11 @@ for T in range(int(input())):
                 temp_x = location[0] + direction[value[0]][0]
                 temp_y = location[1] + direction[value[0]][1]
                 if atoms_new.get((temp_x, temp_y)):
-                    atoms_new[(temp_x,temp_y)] = [4, value[1] + atoms_new[(temp_x,temp_y)][1]]
+                    tempd, tempe = atoms_new[(temp_x, temp_y)]
+                    atoms_new[(temp_x, temp_y)] = [4, value[1] + tempe]
                 else:
                     if temp_x in range(-2000, 2000) and temp_y in range(-2000, 2000):
-                        atoms_new[(temp_x,temp_y)] = [value[0], value[1]]
+                        atoms_new[(temp_x, temp_y)] = [value[0], value[1]]
         for j in atoms_new.values():
             if j[0] == 4:
                 result += j[1]
@@ -31,8 +32,9 @@ for T in range(int(input())):
                     break
             else:
                 break
-    for i in atoms.values():
-        result += i[1]
+    if atoms != atoms_new:
+        for i in atoms.values():
+            result += i[1]
 
     print('#{} {}'.format(T + 1, result))
 
