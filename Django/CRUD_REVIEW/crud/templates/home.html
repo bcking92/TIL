@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+<div class="container mt-5">
+  <div class="row">
+  <h1 class="mx-auto">안녕하살법!</h1>
+</div>
+  <div class="row">
+  <img src="https://img.insight.co.kr/static/2019/05/14/700/255ocxbanba3n956n6w7.jpg" class="mx-auto">
+  </div>
+  <h1 class="mt-5"><a href="create/" class="text-dark">데이터를 추가해 볼테야? 그럼 눌러!</a></h1>
+
+  <table class="table mt-5">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">title</th>
+        <th scope="col">created_at</th>
+        <th scope="col">삭제</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      {% for i in post %}
+      <tr>
+        <th scope="row">{{ i.id }}</th>
+        <td><a href="/post/{{ i.id }}/">{{ i.title }}</a> </td>
+        <td>{{ i.created_at }}</td>
+        <td><a href="/delete/{{ i.id }}/">삭제하기</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+
+{% endblock %}

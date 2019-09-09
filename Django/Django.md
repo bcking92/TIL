@@ -45,7 +45,7 @@ model fat <- MTV MVC의 대원칙, model을 fat하게 만들고 template은 가�
 
 csrf cross site refference
 
-
+{{date | data:'Y-m-d'}} date 타입의 인풋을 넘길때
 
 ### Template inheritance
 
@@ -76,3 +76,6 @@ partilal rendering은 {% include '파일명.html' %} 을 사용
 
 LINTER, LINTING 문법 강제로 지키게 오류처럼 띄워주는 것.
 
+
+
+HTML에서는 _를 쓰지 않는 것이 관례임.
