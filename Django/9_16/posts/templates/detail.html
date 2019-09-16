@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container mt-5">
+  <div class="row d-flex justify-content-between"><h1>{{ p.title }}</h1>
+    <a href="/post/" class="btn btn-primary" style="margin-top:15px">목록</a>
+  </div>
+  <hr>
+  <pre><p class="d-block text-right">수정시각 : {{ p.updated_at | date:"Y-d-m_P"}}</p></pre>
+  <h4 class="mt-5">{{ p.content }}</h4>
+
+  <div class="text-right mt-5">
+  <a href="/post/update/{{ p.id }}" class="btn btn-success">수정하기</a>
+  <hr>
+  
+  
+</div>
+
+<h2>댓글 목록</h2>
+
+<form action="/post/comment/{{ p.id }}/" method=POST>
+  {% csrf_token %}
+    <input type="text" name="content" class="form-control">
+    <div class="d-flex justify-content-end">
+    <button type="submit" class="btn btn-primary mt-1">작성</button>
+  </div>
+  </form>
+
+<table class="table mt-1">
+<tbody>
+  {% for comment in c %}
+  <tr>
+  <td>USER</td>
+  <td>{{ comment.content }}</td>
+</tr>
+  {% endfor %}
+</tbody>
+
+</div>
+
+
+
+
+{% endblock %}

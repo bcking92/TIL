@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container mt-5">
+    <form action="/post/update/{{ p.id }}/" method="POST">
+      {% csrf_token %}
+        <div class="form-group">
+          <label for="exampleFormControlInput1"></label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com", name='title', value="{{ p.title }}">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">{{ p.content }}</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" name='content'>기본입력</textarea>
+        </div>
+        <button type="submit" class="btn-dark">수정하기</button>
+      </form>
+
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container mt-5">
+  <div class="row col-12">
+    <img src="https://s-i.huffpost.com/gen/3948866/thumbs/o-PEPE-THE-FROG-570.jpg?3" alt="POSTST" >
+  </div>
+    <div class="text-right">
+    <a href="/post/create/" class="btn btn-primary">새글 작성하기</a>
+  </div>
+
+    <table class="table mt-1">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">title</th>
+            <th scope="col">created_at</th>
+            <th scope="col">updated_at</th>
+            <th scope="col">delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for p in post %}
+          <tr style="text-overflow: ellipsis; width:800px; overflow: hidden; white-space:pre-line">
+            <th scope="row">{{ p.id }}</th>
+            <td><a href="/post/detail/{{ p.id }}">{{ p.title }}</a></td>
+            <td>{{ p.created_at | date:'Y-m-d_P'}}</td>
+            <td>{{ p.updated_at | date:'Y-m-d_P'}}</td>
+            <td><a href="/post/delete/{{ p.id }}" class="btn btn-danger">삭제</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+</div>
+
+
+
+
+{% endblock %}
