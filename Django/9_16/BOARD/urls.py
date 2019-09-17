@@ -15,8 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.static import static
+from django.conf import settings
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('post/', include('posts.urls')),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# /media/ 라고 들어오는 요청들을 통과시켜주십시오!
+# static()을 사용! <-파일에 대한 요청을 처리할 때 static()을 사용함
+

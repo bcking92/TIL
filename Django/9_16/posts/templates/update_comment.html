@@ -7,12 +7,6 @@
   </div>
   <hr>
   <pre><p class="d-block text-right">수정시각 : {{ p.updated_at | date:"Y-d-m_P"}}</p></pre>
-  {% if p.image %}
-  <img src="{{ p.image.url }}" alt="" class="img-fluid">
-  {% else %}
-  {% load staticfiles %}
-  <img src="{% static 'no-image.png' %}" alt="" class="img-fluid">
-  {% endif %}
   <h4 class="mt-5">{{ p.content }}</h4>
 
   <div class="text-right mt-5">
@@ -31,21 +25,34 @@
     <button type="submit" class="btn btn-primary mt-1">작성</button>
   </div>
   </form>
-  <h2>댓글 목록({{ c | length }})</h2>
+  <h2>댓글 목록({{ p.comment_set.all | length }})</h2>
 <table class="table table-borderless mt-1" style="margin-bottom:200px">
 <tbody>
-
-  {% for comment in c %}
+  {% for comment in p.comment_set.all %}
+  {% if comment.id == target.id %}
+  <tr>
+    <td>USER</td>
+    <form action="/post/comment/update/{{ comment.id }}/" method="POST">
+    {% csrf_token %}
+    <td><textarea type="text" name="content" class="form-control" rows="auto">{{ target.content }}</textarea></td>
+    <td style="width:120px"><button class="btn btn-success" type="submit">수정하기</button></td>
+  </form>
+    <td style="width:120px"><a class="btn btn-danger" href="/post/comment/delete/{{ comment.id }}/">댓글삭제</a></td>
+  </tr>
+  {% else %}
   <tr>
   <td>USER</td>
   <td>{{ comment.content }}</td>
   <td style="width:120px"><a class="btn btn-success" href="/post/comment/update/{{ comment.id }}/">댓글수정</a></td>
   <td style="width:120px"><a class="btn btn-danger" href="/post/comment/delete/{{ comment.id }}/">댓글삭제</a></td>
 </tr>
-  {% empty %}
-  <h2 class="text-warning mt-5">댓글이 없어요! 댓글을 달아주세요!</h2>
+{% endif %}
   {% endfor %}
 </tbody>
+
 </div>
+
+
+
 
 {% endblock %}

@@ -3,21 +3,28 @@
 {% block body %}
 
 <div class="container mt-5">
-    <form action="/post/update/{{ p.id }}/" method="POST">
+    <form action="/post/update/{{ p.id }}/" method="POST" enctype="multipart/form-data">
       {% csrf_token %}
         <div class="form-group">
           <label for="exampleFormControlInput1"></label>
           <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com", name='title', value="{{ p.title }}">
         </div>
         <div class="form-group">
-          <label for="exampleFormControlTextarea1">{{ p.content }}</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" name='content'>기본입력</textarea>
+          <label for="exampleFormControlTextarea1">contents</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" name='content'>{{ p.content }}</textarea>
         </div>
-        <button type="submit" class="btn-dark">수정하기</button>
+        <div class="form-group">
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="customFile" name="image" accept="image/*" value="{{ p.image.url }}">
+                <label class="custom-file-label" for="customFile"></label>
+              </div>
+        </div>
+        <div class="d-flex justify-content-end">
+        <button type="submit" class="btn btn-dark">수정하기</button>
+        </div>
       </form>
 
 </div>
-
 
 
 {% endblock %}

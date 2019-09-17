@@ -6,7 +6,8 @@ from .models import Post, Comment
 def index(request):
     post = Post.objects.all()
     context = {
-        'post' : reversed(post),
+        'post' : post,
+        
     }
     return render(request, 'index.html', context)
 
@@ -17,6 +18,7 @@ def create(request):
             title = request.POST.get('title'),
             content = request.POST.get('content'),
             updated_at = datetime.now(),
+            image = request.FILES.get('image')
             ).save()
 
         return redirect('/post/')
@@ -29,7 +31,7 @@ def detail(request, num):
     c = p.comment_set.all()
     context = {
         'p' : p,
-        'c' : reversed(c),
+        'c' : c,
     }
     return render(request, 'detail.html', context)
 
@@ -56,8 +58,32 @@ def delete(request, num):
 
 def create_comment(request, num):
     p = Post.objects.get(id=num)
+    a = request.POST.get('content')[:300]
     Comment.objects.create(
-        content=request.POST.get('content'),
+        content=a,
         post=p,
     )
     return redirect(f'/post/detail/{num}/')
+
+def delete_comment(request, num):
+    c = Comment.objects.get(id=num)
+    a = c.post.id
+    c.delete()
+    return redirect(f'/post/detail/{a}/')
+
+def update_comment(request, num):
+    if request.method == "POST":
+        c = Comment.objects.get(id=num)
+        c.content = request.POST.get('content')
+        c.save()
+        return redirect(f'/post/detail/{c.post.id}/')
+    else:
+        c = Comment.objects.all()
+        target = Comment.objects.get(id=num)
+        p = target.post
+        context = {
+            'c' : c,
+            'p' : p,
+            'target' : target,
+        }
+        return render(request, 'update_comment.html', context)
