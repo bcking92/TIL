@@ -14,12 +14,14 @@ def index(request):
 
 def create(request):
     if request.method == 'POST':
-        Post(
+        Post
+        (
             title = request.POST.get('title'),
             content = request.POST.get('content'),
             updated_at = datetime.now(),
-            image = request.FILES.get('image')
-            ).save()
+            image = request.FILES.get('image'),
+        
+        ).save()
 
         return redirect('/post/')
     else:
