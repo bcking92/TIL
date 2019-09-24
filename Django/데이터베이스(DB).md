@@ -136,4 +136,4 @@ header exclusion 항상해주자!!
 
 
 
-#### SQLlite는 특별한 요구사항이 없으면 AUTOINCREMENT을 쓰지 않는 것이 관례임.( sqlite는 메모리가 부족한 기기에서 주로 쓰이기 때문에 메모리 관리를 위해서 그렇다고 함)
+#### SQLlite는 특별한 요구사항이 없으면 AUTOINCREMENT을 쓰지 않는 것이 관례임.( sqlite는 메모리가 부족한 기기에서 주로 쓰이기 때문에 메모리 관리를 위해서 그렇다고 함)  
