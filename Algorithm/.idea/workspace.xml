@@ -14,36 +14,36 @@
     <session id="184029832">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.2" value="3" />
+          <entry key="project.open.time.2" value="4" />
           <entry key="project.open.time.3" value="4" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="17070" value="1" />
-          <entry key="py" value="25" />
+          <entry key="py" value="26" />
           <entry key="txt" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="8" />
-          <entry key="Python" value="25" />
+          <entry key="Python" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="12629" />
+          <entry key="py" value="13316" />
           <entry key="txt" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="22" />
-          <entry key="Python" value="12629" />
+          <entry key="Python" value="13316" />
         </counts>
       </usages-collector>
     </session>
@@ -51,19 +51,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/PycharmProjects/supplementary_lesson/17135.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="60" column="4" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Week13/SWEA_5188_최소합.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="15" column="62" lean-forward="true" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
+              <caret line="15" column="62" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
               <folding>
                 <marker date="1569371899562" expanded="true" signature="34:477" ph="..." />
               </folding>
@@ -76,9 +67,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret selection-end-line="17" selection-end-column="45" />
-              <folding>
-                <marker date="1569372718181" expanded="true" signature="56:305" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -101,11 +89,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Week13/SWEA_5203_베이비진게임.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="34" lean-forward="true" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+            <state relative-caret-position="513">
+              <caret line="27" column="54" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Week13/SWEA_5204_병합정렬.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+              <folding>
+                <marker date="1569476421230" expanded="true" signature="209:460" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -187,10 +187,11 @@
         <option value="$PROJECT_DIR$/Week13/SWEA_5202_화물도크.py" />
         <option value="$PROJECT_DIR$/Week13/input.txt" />
         <option value="$PROJECT_DIR$/Week13/SWEA_5203_베이비진게임.py" />
+        <option value="$PROJECT_DIR$/Week13/SWEA_5204_병합정렬.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -379,10 +380,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="1" />
+    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21047008" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21047008" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -395,7 +396,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32899022" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.32899022" />
-      <window_info active="true" anchor="bottom" id="Run" order="10" visible="true" weight="0.2609649" />
+      <window_info anchor="bottom" id="Run" order="10" weight="0.2609649" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -605,33 +606,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/PycharmProjects/supplementary_lesson/17070.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Week12/서울1반9월20일김병철/output.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="68" column="13" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Week12/서울1반9월20일김병철/input.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" selection-end-line="939" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/PycharmProjects/supplementary_lesson/17135.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
+        <state relative-caret-position="1140">
           <caret line="60" column="4" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
         </state>
       </provider>
@@ -639,7 +616,7 @@
     <entry file="file://$PROJECT_DIR$/Week13/SWEA_5188_최소합.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="15" column="62" lean-forward="true" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
+          <caret line="15" column="62" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
           <folding>
             <marker date="1569371899562" expanded="true" signature="34:477" ph="..." />
           </folding>
@@ -650,9 +627,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="17" selection-end-column="45" />
-          <folding>
-            <marker date="1569372718181" expanded="true" signature="56:305" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -677,10 +651,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/supplementary_lesson/17070.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week12/서울1반9월20일김병철/output.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="68" column="13" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week12/서울1반9월20일김병철/input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" selection-end-line="939" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Week13/SWEA_5203_베이비진게임.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="34" lean-forward="true" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+        <state relative-caret-position="513">
+          <caret line="27" column="54" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week13/SWEA_5204_병합정렬.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+          <folding>
+            <marker date="1569476421230" expanded="true" signature="209:460" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
