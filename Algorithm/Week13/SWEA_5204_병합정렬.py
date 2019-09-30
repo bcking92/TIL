@@ -20,7 +20,7 @@ def up(left, right):
                     result.append(i)
                     break
 
-            for
+            for:
         else:
 
 
