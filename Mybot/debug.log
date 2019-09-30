@@ -1,4 +1,0 @@
-[0722/185237.888:ERROR:process_reader_win.cc(123)] NtOpenThread: {액세스 거부} 프로세스가 개체에 액세스를 요구했지만 액세스 권한이 없습니다. (0xc0000022)
-[0722/185237.889:ERROR:exception_snapshot_win.cc(98)] thread ID 5684 not found in process
-[0722/193601.650:ERROR:process_reader_win.cc(123)] NtOpenThread: {액세스 거부} 프로세스가 개체에 액세스를 요구했지만 액세스 권한이 없습니다. (0xc0000022)
-[0722/193601.651:ERROR:exception_snapshot_win.cc(98)] thread ID 9584 not found in process
