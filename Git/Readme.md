@@ -19,7 +19,7 @@
 
 ## How to use git & git hub
 
-- ###	[깃 기초](Introduction)(01_Introduction.md)
+- ###	[깃 기초](01_Introduction.md)
 
 
 
