@@ -1,15 +1,15 @@
 # Git
 
-- Git은 코드를 관리하는 시스템으로 고안되었지만 여러 기능으로 사용된다.
+- Git은 코드를 관리하는 시스템으로 고안되었지만 여러 기능으로 사용됩니다.
   - SCM(Source Code Manager)
   - VCS(Version Control System)
   - 원격저장소, Remote Repository
     - Github, Gitlab, Bitbucket 등
   - 협업도구
-    - Git은 브랜치와 머지를 이용해 강력한 협업 툴로서 기능을 한다.
-    - 협업의 방식에는 크게 3가지가 있지만 주로 Branch and PR 방법을 사용한다.
+    - Git은 브랜치와 머지를 이용해 강력한 협업 툴로서 기능을 합니다.
+    - 협업의 방식에는 크게 3가지가 있지만 주로 Branch and PR 방법을 사용합니다.
       - Push and Pull
-        -  협업자들이 차례로 Push와 Pull을 진행한다. 동시에 작업하는 것이 아님.
+        -  협업자들이 차례로 Push와 Pull을 진행하는 방법. 동시에 작업하는 것이 아님.
       - Fork and PR(Pull Request)
         - 관리자의 Repository를 Fork 해와서 수정 후 pull request를 보내는 방식
       - Branch and PR(Pull Request)

@@ -15,7 +15,6 @@ def select(x):
                     temp -= heights[x]
                     select(x + 1)
 
-
 for T in range(int(input())):
     N, B = map(int, input().split())
     end = 0
