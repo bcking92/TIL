@@ -19,9 +19,7 @@
 
 ## How to use git & git hub
 
-- ###	[로컬에서 깃 사용하기(Introduction)](01_Introduction.md)
-
-
+- ###	[깃 기초](Introduction)(01_Introduction.md)
 
 
 
