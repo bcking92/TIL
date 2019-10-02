@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Algorithm.iml" filepath="$PROJECT_DIR$/.idea/Algorithm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../MachineLearning/.idea/MachineLearning.iml" filepath="$PROJECT_DIR$/../MachineLearning/.idea/MachineLearning.iml" />
       <module fileurl="file://$USER_HOME$/Test/.idea/Test.iml" filepath="$USER_HOME$/Test/.idea/Test.iml" />
       <module fileurl="file://$USER_HOME$/PycharmProjects/supplementary_lesson/.idea/supplementary_lesson.iml" filepath="$USER_HOME$/PycharmProjects/supplementary_lesson/.idea/supplementary_lesson.iml" />
     </modules>
