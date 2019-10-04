@@ -4,11 +4,14 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/MachineLearning" />
     </content>
+    <orderEntry type="jdk" jdkName="Python 3.5" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="supplementary_lesson" />
     <orderEntry type="module" module-name="Test" />
     <orderEntry type="module" module-name="Test" />
     <orderEntry type="module" module-name="MachineLearning" />
+    <orderEntry type="module" module-name="MachineLearning" />
+    <orderEntry type="module" module-name="123" />
   </component>
   <component name="TestRunnerService">
     <option name="PROJECT_TEST_RUNNER" value="Unittests" />
