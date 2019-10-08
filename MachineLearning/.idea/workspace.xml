@@ -1,38 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ac374b9-96f1-45bc-b0de-aa59d59f021a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Algorithm/.idea/Algorithm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Algorithm/.idea/Algorithm.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Algorithm/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Algorithm/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Algorithm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Algorithm/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MachineLearning.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Activate.ps1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/activate.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/deactivate.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/easy_install-3.5-script.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/easy_install-3.5.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/easy_install-script.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/easy_install.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/f2py.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/pip-script.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/pip.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/pip3-script.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/pip3.5-script.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/pip3.5.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/pip3.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/python.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/python3.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/python35.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/pythonw.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/sqlite3.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/tcl86t.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/tk86t.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/vcruntime140.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pip-selfcheck.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyvenv.cfg" beforeDir="false" />
-    </list>
+    <list default="true" id="9ac374b9-96f1-45bc-b0de-aa59d59f021a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,11 +12,12 @@
     <session id="-1986211121">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -78,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/hands_on_machinelearning/02.py">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="12" lean-forward="true" selection-start-column="12" selection-end-column="12" />
+              <caret column="12" selection-start-column="12" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -106,6 +76,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -132,7 +103,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -221,7 +191,7 @@
     <entry file="file://$PROJECT_DIR$/hands_on_machinelearning/02.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="12" lean-forward="true" selection-start-column="12" selection-end-column="12" />
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
         </state>
       </provider>
     </entry>
