@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1 id="title">Articles</h1>
+<div class="container">
+<a href="/articles/create/">새글쓰기</a>
+<!-- 모든 Article들을 보여줌 -->
+<table>
+  <tr>
+    <th>ID</th>
+    <th>TITLE</th>
+    <th>상세보기</th>
+  </tr>
+  
+{% for article in articles %}
+<tr>
+  <td>{{ article.id }}</td>
+  <td>{{ article.title | slice:":15"}}</td>
+  <td><a href="{{ article.get_absolute_url }}">상세보기</a></td>
+</tr>
+{% endfor %}
+</table>
+</div>
+{% endblock %}
