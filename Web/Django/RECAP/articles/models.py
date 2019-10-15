@@ -22,3 +22,16 @@ class Article(models.Model):
         # string을 직접 적어주지 않고 장고 내부의 reverse()함수를 통해 return 값을 정해줄 것임
         # reverse('어느 뷰함수로 갈건지', '인자')
         return reverse('articles:detail', kwargs={'article_pk':self.pk})
+
+class Comment(models.Model):
+    article_id = models.ForeignKey(Article, on_delete="CASCADE")
+    comment = models.CharField(max_length=255)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+
+    def __str__(self):
+        return self.comment
+    
+    class Meta:
+        ordering = ('-pk',)
