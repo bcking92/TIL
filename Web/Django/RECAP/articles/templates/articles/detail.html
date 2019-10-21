@@ -19,7 +19,7 @@
 <h1 class="mb-5">{{ comments | length }} Comments</h1>
 {% for comment in comments %}
 <div class="row d-flex justify-content-between">
-<h3>{{ comment.comment }}</h3>
+{{ forloop.counter }}<h3>{{ comment.comment }}</h3>
 <form action="{% url 'articles:comments_delete' article.pk comment.pk %}" method="POST">
   {% csrf_token %}
   <button class="btn btn-danger" type="submit">삭제</button>

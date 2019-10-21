@@ -76,7 +76,7 @@ def update(request, article_pk):
         'article': article,
         'form': form,
     }
-    return render(request, 'articles/update.html', context)
+    return render(request, 'articles/create.html', context)
 
 @require_POST
 def delete(reqeust, article_pk):
@@ -92,11 +92,12 @@ def comments(request, article_pk):
     article = get_object_or_404(Article, id=article_pk)
     if request.method == "POST":
         comment_form = CommentForm(request.POST)
-        embed()
+        # embed()
         if comment_form.is_valid():
             temp = comment_form.save(commit=False)
-            temp.article_id = article
+            temp.article = article
             temp.save()
+            # return redirect('articles:detail', article_pk)
             return redirect(article)
     return redirect(article)
 

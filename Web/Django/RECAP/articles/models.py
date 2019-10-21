@@ -24,7 +24,7 @@ class Article(models.Model):
         return reverse('articles:detail', kwargs={'article_pk':self.pk})
 
 class Comment(models.Model):
-    article_id = models.ForeignKey(Article, on_delete="CASCADE")
+    article = models.ForeignKey(Article, on_delete="CASCADE")
     comment = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
