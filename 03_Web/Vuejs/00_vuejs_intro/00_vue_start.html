@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>VUE TODO</title>
+  <style>
+    .red {
+      color: crimson;
+    }
+
+    .yellow {
+      color: orange;
+      text-decoration-line: line-through;
+    }
+    .completed{
+      text-decoration-line: line-through;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <h1>{{ message }}</h1>
+    <button @click="deleteDone">완료 목록 전체 삭제</button>
+    <img v-bind:src="imgSrc" v-bind:width="width" :height="height">
+    <input type="text" v-model="newTodo" @keyup.enter="submit">
+    <button @click="submit">확인</button>
+    <select v-model="status">
+      <option value="all" selected>전체보기</option>
+      <option value="active">진행중</option>
+      <option value="completed">완료</option>
+    </select>
+    <h2> All </h2>
+    <!-- <ul>
+      <li :class="red" v-for="todo in todoByStatus()" v-if="!todo.completed" @click="check(todo)" style="list-style: none;" :key="todo.id">
+        <input type="checkbox" v-model="todo.completed">{{ todo.content }}</li>
+      <li :class="yellow" v-else @:click="check(todo)" style="list-style: none;"><input type="checkbox"
+          v-model="todo.completed" :key="todo.id">{{ todo.content }}</li>
+    </ul> -->
+
+    <ul>
+      <li :class="{red: !todo.completed, yellow: todo.completed}" v-for="todo in todoByStatus()"@click="check(todo)" style="list-style: none;" :key="todo.id">
+        <input type="checkbox" v-model="todo.completed">{{ todo.content }}</li>
+    </ul>
+
+    <div :class="{completed: true}" :style="{color: activeColor, fontSize: fontSize + 'px'}">
+      스타일 주ㅝ보기
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    // M (V VM) 구조
+    // M  T  V
+    const app = new Vue({
+      el: '#app',
+      data: {
+        message: "안녕 Vue.js",
+        name: "KIM BYUNGHCUL",
+        todos: [{
+            id: 1,
+            content: '꽃 사서 배달시키기',
+            completed: false
+          },
+          {
+            id: 2,
+            content: 'IR 자료 만들기',
+            completed: false
+          },
+          {
+            id: 3,
+            content: '과목평가 문제 검토하기',
+            completed: false
+          },
+          {
+            id: 4,
+            content: '프로젝트 명세 검토하기',
+            completed: false
+          },
+        ],
+        imgSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png',
+        width: '200px',
+        height: '200px',
+        red: 'red',
+        yellow: 'yellow',
+        newTodo: '',
+        activeColor: 'indigo',
+        fontSize: '59',
+        completed: '',
+        status: 'all', // 다보여주기, complete, active
+        
+      },
+      methods: {
+        changeName(input) {
+          this.name = input
+        },
+        check(t) {
+          if (t.completed === false) {
+            t.completed = true
+          } else {
+            t.completed = false
+          }
+          // this.todos.sort(function (a, b) {
+          //   if (a.completed > b.completed) {
+          //     return 1;
+          //   }
+          //   if (a.completed < b.completed) {
+          //     return -1;
+          //   }
+          //   return 0;
+          // })
+        },
+      submit() {
+        if (this.newTodo != 0) {
+        console.log(this.todos.push({
+          id: Date.now(),
+          content: this.newTodo,
+          completed: false,
+        }))
+        this.newTodo = ""
+      }},
+      deleteDone() {
+        const filteredTodo = this.todos.filter(e =>
+          e.completed === false
+        )
+        // const filteredTodo = this.todos.filter(function (e) {
+        //   return e.completed === false
+        // })
+        this.todos = filteredTodo
+      },
+      todoByStatus() {
+        // 진행 중인 일(active)
+        if (this.status === 'active') {
+          return this.todos.filter(function (todo) {
+            return !todo.completed
+          })
+        }
+        if (this.status === 'completed') {
+          return this.todos.filter(function (todo) {
+            return todo.completed
+          })
+        }
+        return this.todos
+        // 완료 된 일(completed)
+      }
+        
+    },
+    })
+  </script>
+</body>
+
+</html>
