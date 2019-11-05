@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+</head>
+
+<body>
+  <div id="app">
+    <select v-model="status">
+      <option value="all">all</option>
+      <option value="completed">completed</option>
+      <option value="active">active</option>
+    </select>
+    <input type="text" v-model="newTodo" @keyup.enter="addTodo()">
+    <button @click="addTodo()">+</button>
+    <li v-for="todo in todoByStatus" :key="todo.id">
+      <span>{{ todo.content }}</span>
+      <button @click="removeTodo(todo)">x</button>
+    </li>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    const STORAGE_KEY = 'vue-todos'
+    const todoStorage = {
+      save(todo) {
+        return localStorage.setItem(STORAGE_KEY,JSON.stringify(todo))
+      },  // create()
+      fetch() {
+        return JSON.parse(localStorage.getItem(STORAGE_KEY)) || ['없음']
+      }, // --.objects.all()
+    }
+
+    const app = new Vue({
+      el: '#app',
+      data: {
+        todos: todoStorage.fetch(),
+        newTodo: '',
+        status: 'all',
+      },
+      methods: {
+        addTodo: function () {
+          if (this.newTodo) {
+          const todo = {
+            id: Date.now(),
+            content: this.newTodo,
+            completed: false,
+          }
+          this.todos.push(todo)
+          this.newTodo = ''
+        }},
+        // 이전에는 clearCompleted로 한번에 완료된 목록 삭제
+        // 이번에는 특정 todo를 삭제!
+        removeTodo: function (todo) {
+          this.todos = this.todos.filter( e => {
+            return e.id != todo.id
+          })
+        },
+        
+      },
+      computed: {
+        todoByStatus() {
+          if (this.status === 'active') {
+          return this.todos.filter( e => {
+            return !e.completed
+          })}
+          if (this.status === 'completed') {
+            return this.todos.filter( e => {
+              return e.completed
+            })          
+          }
+          return this.todos
+        },
+      },
+      watch: {
+        todos: {
+          handler(todos) {
+            todoStorage.save(todos)
+          },
+          deep: true,
+        },
+        status: {
+          handler(status) {
+            console.log('change status')
+          }
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
