@@ -1,27 +1,35 @@
 <template>
-  <div>
+  <div class="bg-video-list">
     <h2>Video List</h2>
     <ul>
-      <li v-for="video in videos" v-bind:key="video.id.videoId">
-        <img :src="video.snippet.thumbnails.default.url">
-      </li>
+        <VideoListItem v-for="video in videos" :key="video.id.videoId" :video="video" @videoSelect="onVideoSelect" />
     </ul>
-    
   </div>
-  
 </template>
 
 <script>
+import VideoListItem from './VideoListItem'
+
 export default {
   name: 'VideoList',
+  components: {
+    VideoListItem,
+  },
   props: {
     videos: {
       type: Array,
     },
   },
+  methods: {
+    onVideoSelect(video) {
+      this.$emit('videoSelected', video)
+    },
+  },
 }
 </script>
 
-<style>
-
+<style scoped>
+  .bg-video-list {
+    background-color: cadetblue;
+}
 </style>

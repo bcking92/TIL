@@ -14,22 +14,10 @@ for T in range(int(input())):
     for i in range(1, N-1):
         for j in range(i):
             a = (i - j, j)
-            # print(f'a = {arr[i-j][j]}')
             for k in range(i-j):
                 b = (i - j - (1 + k), j + (1 + k))
-                # print(f'b = {arr[i - j - (1 + k)][j + (1 + k)]}')
-
                 for l in range(min(N - (i - j + 1), N - (j + (1 + k) + 1))):
-                    # print(N)
-                    # print(N - (i - j + 1))
-
-                    # print(N - (j + (1 + k) + 1))
-                    # print(min(N - (i - j + 1), N - (j + (1 + k) + 1)))
-                    # print(k + 2 , l + 2)
                     go = 1
-                    # print(f'c = {arr[i - j + 1 + l][j + 1 + l]}')
-                    # print(f'd = {arr[i - j - (1 + k) + l + 1][j + (1 + k) + l + 1]}')
-                    # print('---')
                     c = (i - j + 1 + l, j + 1 + l)
                     d = (i - j - (1 + k) + l + 1, j + (1 + k) + l + 1)
                     print(f'a = {a}, b = {b}, c = {c}, d = {d}')
@@ -56,7 +44,6 @@ for T in range(int(input())):
                             else:
                                 go = 0
                                 break
-                            b = (i - j - (1 + k), j + (1 + k))
                             if not visited.get(arr[i - j - (1 + k) + l][j + (1 + k) + l]):
                                 visited[arr[i - j - (1 + k) + l][j + (1 + k) + l]] = 1
                                 temp += arr[i - j - (1 + k) + l][j + (1 + k) + l]
