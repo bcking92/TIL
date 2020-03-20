@@ -110,7 +110,44 @@
     
     ```
 
+### 형변환과 멤버 변수
+
+형변환에 참여한 서로 상속 관계에 있는 두 클래스 간에는 동일한 이름의 변수가 존재하거나 메서드가 Overriding 되어 있을 수 있다. **그러므로 생성된 객체 변수를 통해 멤버에 접근할 때 주의해야 한다.**
+
+```java
+class Parent {
+    int num = 10;
     
+    void printNum() {
+        System.out.println(num);
+    }
+}
+class Child extends Parent {
+    int num = 20;
+    
+    void printNum() {
+        System.out.println(num);
+    }
+}
+
+public class ObjectCastTest {
+    public static void main(String args[]) {
+        Parent p = new Child();
+        p.printNum();
+        System.out.println(p.num);
+    }
+}
+// 실행 결과
+// 20
+// 10
+// 첫번째 printNum() 에서는 Child 객체에 Overriding 된 printNum() 메서드를 호출한다.
+// 두번째 println(p.num) 에서는 Parent 객체의 num 값을 출력한다.
+```
+
+- 위와같은 결과가 나오는 이유
+  - 변수에 대한 접근은 객체의 유형에 따라 결정된다.
+  - 메서드 호출은 할당되는 인스턴스에 따라 결정된다.
+  - 이것은 객체 참조 변수가 **변수**나 **메서드**를 참조하는 경우, **참조 관계를 결정하는 시간**이 **다르기** 때문에 나타는 차이이다.
 
 
 
