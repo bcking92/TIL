@@ -1,4 +1,4 @@
-### sslforfree에서 무료 SSL 보안 인증서 발급받아 Nginx에 적용하기
+#### sslforfree에서 무료 SSL 보안 인증서 발급받아 Nginx에 적용하기
 
 1. [SSL for free](https://www.sslforfree.com/)에 들어가서 도메인의 주소를 입력하고 Create Free SSL Certificate버튼을 클릭한다.
 
@@ -89,7 +89,7 @@
 
 <br>
 
-### Express에 SSL 적용하기
+#### Express에 SSL 적용하기
 
 Client Server에 SSL을 적용했으면 REST API Server에도 SSL을 적용시켜야 한다. (위험하다고 post, put, delete 요청이 안보내짐, get은 되긴하는데 경고 메세지를 띄운다.)
 
@@ -117,7 +117,7 @@ https.createServer({
 
  <br>
 
-### 이 사이트의 보안연결은 완벽하지 않습니다.
+#### 이 사이트의 보안연결은 완벽하지 않습니다.
 
 Client서버와 REST API 서버 모두 HTTPS를 적용했는데 이런 경고 메세지가 떴다. 로그인 페이지에선 이 메세지가 뜨지 않고 로그인을 한 뒤 부터 이 메세지가 뜨는데 콘솔창에 경고메세지와 함께 어떤 파일이 위험한지 알려주고 있었다. 
 
