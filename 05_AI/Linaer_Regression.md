@@ -11,13 +11,11 @@
 
 - 선형 회귀의 결과값은 실수로 나타나며 input 값에 대해 다음과 같은 선형 함수로 나타낼 수 있다.
 
-  ### <img src="https://render.githubusercontent.com/render/math?math=y(x)=w^Tx %2B \epsilon">
+  <img src="https://render.githubusercontent.com/render/math?math=y(x)=w^Tx %2B \epsilon">
 
   <img src="https://render.githubusercontent.com/render/math?math=w^T">의 기울기를 가지고 <img src="https://render.githubusercontent.com/render/math?math=\epsilon">의 절편을 가진다.
 
-- 이 때, <img src="https://render.githubusercontent.com/render/math?math=\epsilon">(the residual error)은 Gaussian distribution을 따른다.
-
-- 
+- 이 때, <img src="https://render.githubusercontent.com/render/math?math=\epsilon">(the residual error)은 Gaussian distribution을 따른다고 가정하면
 
   <img src="https://render.githubusercontent.com/render/math?math=p(y|\theta) = \mathcal{N}(y|u(x), \sigma^2(x))">
 
