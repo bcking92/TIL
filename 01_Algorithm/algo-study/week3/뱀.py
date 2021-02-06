@@ -3,6 +3,11 @@
 
 1 = 사과
 2 = 뱀
+
+뱀의 위치를 큐에 넣어서 구현
+ - 머리가 이동하면 머리좌표를 큐에 push
+    - 사과를 먹었다면 그대로 유지
+    - 사과를 먹지 않았다면 pop(꼬리부분 잘라짐) 
 '''
 
 
@@ -29,7 +34,6 @@ for i in range(L):
 while True:
     time += 1
     new_head_x, new_head_y = snake_position[-1][0] + dxdy[snake_direction][0], snake_position[-1][1] + dxdy[snake_direction][1] 
-    print(new_head_x, new_head_y)
     if 0 <= new_head_x <= N-1 and 0 <= new_head_y <= N-1:
         if [new_head_x, new_head_y] in snake_position:
             print(time) 
