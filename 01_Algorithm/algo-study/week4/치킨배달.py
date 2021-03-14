@@ -1,4 +1,9 @@
 def combination(arr, num):
+    """
+    @param arr 리스트
+    @param num 몇개를 뽑을지
+    @returns 경우의 수의 배열을 리턴
+    """
     result = []
     for i in range(2 ** len(arr)):
         temp = []
